@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Matrimonial Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            text-align: center;
+            background-image: url("{% static 'bg.jpg' %}");
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        .logo {
+            width: 150px;
+        }
+        .welcome-text {
+            font-family: "Pacifico", cursive;
+            font-size: 28px;
+            background-color: #ffb6c1;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .content {
+            padding: 20px;
+            font-family: "Roboto", sans-serif;
+            color: #fff958;
+        }
+        .content-text {
+            font-size: 18px; /* Increase the font size */
+            font-weight: bold; /* Increase the font weight */
+            margin-bottom: 20px; /* Add some space below the text */
+        }
+        .button-link {
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button-link-signin {
+            background-color: #f5f5dc;
+            border: 2px solid #d2b48c;
+            color: #8b4513;
+        }
+        .button-link-signup {
+            background-color: #98fb98;
+            border: 2px solid #32cd32;
+            color: #006400;
+        }
+        .button-link:hover {
+            background-color: #0073e6;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="{% static 'logo.jpg' %}" alt="Matrimonial Website Logo">
+        <div class="welcome-text">Welcome to Matrimonial Website</div>
+    </div>
+
+    <div class="content">
+        <p class="content-text">This matrimonial website aims to help people find their life partners. </p>
+            <p class="content-text">Please choose one of the following options:</p>
+
+        <a href="{% url 'login' %}" class="button-link button-link-signin">Sign In</a> | <a href="{% url 'signup' %}" class="button-link button-link-signup">Sign Up</a>
+    </div>
+</body>
+</html>

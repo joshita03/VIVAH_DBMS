@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Display</title>
+</head>
+<body>
+
+    <h1>Customer Feedback</h1>
+
+    {% if feedback %}
+        <p><strong>Feedback:</strong> {{ feedback.Feedback }}</p>
+        <p><strong>Rating:</strong> {{ feedback.Rating }}</p>
+    {% else %}
+        <p>No feedback available.</p>
+    {% endif %}
+
+    <!-- You can include additional styling or elements as needed -->
+
+</body>
+</html>

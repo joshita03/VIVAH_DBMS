@@ -1,0 +1,27 @@
+<!-- partner_pref_display.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner Preferences</title>
+</head>
+<body>
+
+    <h1>Partner Preferences</h1>
+
+    {% if partner_pref %}
+        <p><strong>Age Range:</strong> {{ partner_pref.Age_min }} - {{ partner_pref.Age_max }}</p>
+        <p><strong>Religion:</strong> {{ partner_pref.Religion }}</p>
+        <p><strong>Diet:</strong> {{ partner_pref.get_Diet_display }}</p>
+        <p><strong>Income:</strong> {{ partner_pref.Income }}</p>
+    {% else %}
+        <p>No partner preferences set.</p>
+    {% endif %}
+
+    <a href="{% url 'dash' %}">Back to Dashboard</a>
+    <!-- Provide the correct URL for editing partner preferences -->
+
+</body>
+</html>

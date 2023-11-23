@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+</head>
+<body>
+
+    <h1>User Profile</h1>
+
+    <p><strong>Name:</strong> {{ customer.Name }}</p>
+    <p><strong>Date of Birth:</strong> {{ customer.DOB }}</p>
+    <p><strong>Sex:</strong> {{ customer.get_Sex_display }}</p>
+    <p><strong>Height:</strong> {{ customer.Height }}</p>
+    <p><strong>Mother Tongue:</strong> {{ customer.Mother_tongue }}</p>
+    <p><strong>Occupation:</strong> {{ customer.Occupation }}</p>
+    <p><strong>Income:</strong> {{ customer.Income }}</p>
+    <p><strong>City:</strong> {{ customer.City }}</p>
+    <p><strong>Country:</strong> {{ customer.Country }}</p>
+    <p><strong>Religion:</strong> {{ customer.Religion }}</p>
+    <p><strong>Drink:</strong> {{ customer.get_Drink_display }}</p>
+    <p><strong>Smoke:</strong> {{ customer.get_Smoke_display }}</p>
+    <p><strong>Diet:</strong> {{ customer.get_Diet_display }}</p>
+    <p><strong>Highest Education:</strong> {{ customer.Highest_Education }}</p>
+    <p><strong>Previous Marital Status:</strong> {{ customer.get_Prev_Marital_Status_display }}</p>
+    <p><strong>About Me:</strong> {{ customer.About_Me }}</p>
+    <p><strong>Matched:</strong> {{ customer.get_Matched_display }}</p>
+
+    
+    <a href="{% url 'dash' %}">Back to Dashboard</a>
+
+</body>
+</html>

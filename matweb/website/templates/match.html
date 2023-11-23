@@ -1,0 +1,24 @@
+<!-- match.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Potential Match</title>
+</head>
+<body>
+
+    <h1>Matched with</h1>
+
+    {% if partner_pref %}
+        <p><strong>Name:</strong> {{ partner_pref.0.Name }}</p>
+    {% else %}
+        <p>No Matches</p>
+    {% endif %}
+
+    <a href="{% url 'dash' %}">Back to Dashboard</a>
+    <!-- Provide the correct URL for editing partner preferences -->
+
+</body>
+</html>
